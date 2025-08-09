@@ -1,0 +1,16 @@
+
+# List of student dictionaries
+students = [
+    {"name": "sam", "marks": 12},
+    {"name": "sagar", "marks": 14}
+]
+
+# Sorting the list based on marks in descending order
+print("----- Sorted on marks -----\n")
+students.sort(key=lambda x: x["marks"], reverse=True)
+print("\n")
+
+# Demonstrating a lambda function for addition
+print("----- Using lambda function instead of function definition -----")
+add = lambda a, b: a + b
+print(f"Result of add(1, 2): {add(a=1, b=2)}")
