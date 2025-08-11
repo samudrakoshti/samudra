@@ -5,7 +5,9 @@ for i in range(int(input())):
     score = float(input())
     records[name]=score
     grades.append(score)
-sorted(grades)
+grades=sorted(grades)
+grades=set(grades)
+grades=list(grades)
 s_l_g = grades[1]
 names=[]
 for name,score in records.items():
@@ -15,3 +17,5 @@ names.sort()
 for i in range(len(names)):
     print(names[i])
     
+    
+   
