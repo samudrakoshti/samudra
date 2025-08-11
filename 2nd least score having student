@@ -1,0 +1,17 @@
+records = {}
+grades = []
+for i in range(int(input())):
+    name = input()
+    score = float(input())
+    records[name]=score
+    grades.append(score)
+sorted(grades)
+s_l_g = grades[1]
+names=[]
+for name,score in records.items():
+  if score==s_l_g:
+    names.append(name)
+names.sort()
+for i in range(len(names)):
+    print(names[i])
+    
