@@ -1,0 +1,21 @@
+class database:
+    def __init__(self,username,id):
+        self.username=username
+        self.id=id
+    def loggin(self):
+        print(f"code={self.id} is loggin:")
+class data_information(database):
+    def __init__(self,code,username,id):
+        super().__init__(username,id)
+        self.__code=code##private attribute
+    def delete(self):
+            print(f"{self.username} (code={self.__code} ) deleted from database")
+
+class output(data_information):
+    def inf(self):
+        print(f"{self.username}'s code is {self.__code}")
+d=output(324,"sam",369)
+d.delete()
+d.loggin()
+print(d.__dict__)       #by this we can acces private attribute
+d.inf()                 #we can't acces private aattribute by this sintax
