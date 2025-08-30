@@ -1,0 +1,34 @@
+import smtplib
+
+email=input("SENDER EMAIL: ")
+receiver_email=input("RECEIVER EMAIL: ")
+
+subject=input("subject: ")
+message=input("message: ")
+
+text=f"Subject: {subject}\n\n{message}"
+
+server=smtplib.SMTP("smtp.gmail.com",587)
+server.starttls()          #The line server.starttls() tells the program to use TLS for security before sending the login password or any emails.
+
+
+
+server.login(email,"ijil yctb dhpi cqxn")
+
+server.sendmail(email,receiver_email,text)
+
+print("email haas been sent to"+receiver_email )
+
+'''python 
+server = smtplib.SMTP("smtp.gmail.com", 587)
+
+Connects to the Gmail SMTP server.
+
+"smtp.gmail.com" is the address of Gmail’s outgoing mail server.
+
+587 is the port number used for email submission with TLS encryption.'''
+
+'''
+TLS encryption (Transport Layer Security) is a security protocol that protects data as it travels between computers over the internet, such as between an email client and an email server.
+
+'''
